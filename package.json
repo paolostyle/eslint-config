@@ -1,0 +1,9 @@
+{
+  "name": "@paolostyle/eslint-config",
+  "version": "1.0.0",
+  "description": "Heavily opinionated ESLint config for React with Prettier formatting",
+  "main": "index.js",
+  "repository": "?",
+  "author": "Paweł Dąbrowski <dabrowskip9@gmail.com>",
+  "license": "MIT"
+}
