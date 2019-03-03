@@ -1,9 +1,49 @@
 {
   "name": "@paolostyle/eslint-config",
   "version": "1.0.0",
-  "description": "Heavily opinionated ESLint config for React with Prettier formatting",
+  "description": "Airbnb based ESLint config for React with Prettier formatting",
   "main": "index.js",
-  "repository": "?",
+  "repository": "https://github.com/paolostyle/eslint-config",
+  "keywords": [
+    "eslint",
+    "eslintconfig"
+  ],
   "author": "Paweł Dąbrowski <dabrowskip9@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "check:unused": "eslint-find-rules -u",
+    "check:prettier": "eslint --print-config ./index.js | eslint-config-prettier-check"
+  },
+  "peerDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.15.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-react": "^7.12.4",
+    "eslint-plugin-react-hooks": "^1.4.0",
+    "prettier": "1.16.4"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^1.4.2",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.15.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-find-rules": "^3.3.1",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-react": "^7.12.4",
+    "eslint-plugin-react-hooks": "^1.4.0",
+    "prettier": "1.16.4",
+    "typescript": "^3.3.3333"
+  },
+  "engines": {
+    "node": ">= 8"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "printWidth": 100
+  }
 }
