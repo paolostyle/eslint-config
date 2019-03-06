@@ -195,9 +195,9 @@ module.exports = {
     ],
 
     // *** Different from Airbnb
-    // I prefer using .js and so should you
+    // I prefer using .js and so should you, but you can do whatever you want
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-filename-extension.md
-    'react/jsx-filename-extension': ['error', { extensions: ['.js'] }],
+    'react/jsx-filename-extension': 'off',
 
     // *** Different from Airbnb
     // This will most likely change in next major release of Airbnb

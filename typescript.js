@@ -1,9 +1,28 @@
 // WIP
 
+// remove this and whole settings once eslint-plugin-import is updated
+const jsExtensions = ['.js', '.jsx'];
+const tsExtensions = ['.ts', '.tsx'];
+const allExtensions = jsExtensions.concat(tsExtensions);
+
 module.exports = {
   extends: ['plugin:@typescript-eslint/recommended', 'prettier/@typescript-eslint'],
-  parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint', 'prettier'],
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    project: './tsconfig.json'
+  },
+  settings: {
+    'import/extensions': allExtensions,
+    'import/parsers': {
+      '@typescript-eslint/parser': tsExtensions
+    },
+    'import/resolver': {
+      node: {
+        extensions: allExtensions
+      }
+    }
+  },
   rules: {
     '@typescript-eslint/array-type': ['error', 'array-simple'],
     '@typescript-eslint/ban-types': [
@@ -44,6 +63,14 @@ module.exports = {
     ],
     '@typescript-eslint/explicit-function-return-type': ['error', { allowExpressions: true }],
     '@typescript-eslint/explicit-member-accessibility': 'off',
-    '@typescript-eslint/member-naming': 'off'
+    '@typescript-eslint/member-naming': 'off',
+    '@typescript-eslint/no-unused-vars': [
+      'error',
+      {
+        vars: 'all',
+        args: 'after-used',
+        ignoreRestSiblings: true
+      }
+    ]
   }
 };
