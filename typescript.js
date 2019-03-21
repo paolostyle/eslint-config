@@ -73,7 +73,7 @@ module.exports = {
     '@typescript-eslint/no-non-null-assertion': 'off',
     // for more dynamic type definitions
     '@typescript-eslint/no-object-literal-type-assertion': [
-      true,
+      'error',
       {
         'allow-arguments': true
       }
