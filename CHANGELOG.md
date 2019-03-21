@@ -1,5 +1,9 @@
 # Changelog
 
+## [2.0.0] - 21.03.2019
+- Completed first version of rules for TypeScript with comments
+- Updated dependencies
+
 ## [1.1.0] - 7.03.2019
 - Added TypeScript config for _eslint-plugin-import_
 - Added default path to tsconfig.json for TypeScript parser
