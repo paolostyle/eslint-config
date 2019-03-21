@@ -1,6 +1,6 @@
 # Changelog
 
-## [2.0.1] - 21.03.2019
+## [2.0.2], [2.0.1] - 21.03.2019
 - Fixed an invalid rule setting for _@typescript-eslint/no-object-literal-type-assertion_
 
 ## [2.0.0] - 21.03.2019

@@ -1,4 +1,4 @@
-// remove this and whole settings field once eslint-plugin-import is updated
+// TODO: remove this and whole settings field once eslint-plugin-import is updated
 const jsExtensions = ['.js', '.jsx'];
 const tsExtensions = ['.ts', '.tsx'];
 const allExtensions = jsExtensions.concat(tsExtensions);
@@ -61,13 +61,13 @@ module.exports = {
         properties: 'never'
       }
     ],
-    // seems overly excessive to me, especially for curried functions - will reconsider
+    // seems overly excessive to me, especially for curried functions - TODO: reconsider?
     '@typescript-eslint/explicit-function-return-type': 'off',
     // I REALLY dislike `public` keyword, I'm totally in for using protected/private but `public` is a no for me
     '@typescript-eslint/explicit-member-accessibility': 'off',
     // dangling underscores are ughhh
     '@typescript-eslint/member-naming': 'off',
-    // this is useful and more like a disable-next-line kind of rule but for now I'll leave it as is
+    // this is useful and more like a disable-next-line kind of rule but for now I'll leave it as is, TODO rethink?
     '@typescript-eslint/no-explicit-any': 'off',
     // sometime you really know better than the compiler
     '@typescript-eslint/no-non-null-assertion': 'off',
@@ -75,7 +75,7 @@ module.exports = {
     '@typescript-eslint/no-object-literal-type-assertion': [
       'error',
       {
-        'allow-arguments': true
+        allowAsParameter: true
       }
     ],
     // the same as in airbnb
@@ -93,7 +93,7 @@ module.exports = {
     '@typescript-eslint/unified-signature': 'error',
     // it gives false errors with importing types/interfaces from other modules
     'import/named': 'off',
-    // honestly... I'm conflicted here, this one might change
+    // honestly... I'm conflicted here, this one might change, TODO?
     'import/prefer-default-export': 'off',
     // no reason to use these in TypeScript
     'react/prop-types': 'off'
