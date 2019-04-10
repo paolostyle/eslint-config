@@ -90,7 +90,7 @@ module.exports = {
     // using type is shorter and there's no reason to not use them where it makes sense
     '@typescript-eslint/prefer-interface': 'off',
     // makes sense but is not in recommended
-    '@typescript-eslint/unified-signature': 'error',
+    '@typescript-eslint/unified-signatures': 'error',
     // it gives false errors with importing types/interfaces from other modules
     'import/named': 'off',
     // honestly... I'm conflicted here, this one might change, TODO?

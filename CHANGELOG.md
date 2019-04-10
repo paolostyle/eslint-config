@@ -1,5 +1,10 @@
 # Changelog
 
+## [2.1.0] - 10.04.2019
+- Fixed typo in a unified-signature**s** rule name
+- Disabled for..of loops from restricted syntax
+- Updated dependencies
+
 ## [2.0.2], [2.0.1] - 21.03.2019
 - Fixed an invalid rule setting for _@typescript-eslint/no-object-literal-type-assertion_
 
