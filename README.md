@@ -6,7 +6,7 @@
 An ESLint config I've been using for a while (though not as a separate package) in React projects.
 Heavily based on [Airbnb config](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb), but with disabled a11y rules (might use them, but as warnings so it doesn't crash the build) and a bunch of changes in other rules - they are noted with `// *** Different from Airbnb` comment in `index.js`.
 
-Since I'm planning to migrate my React projects to TypeScript soon™ there is also a WIP config for TypeScript mostly based on recommended config from [@typescript-eslint plugin](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin) that should be used with the main one, but it's not really used yet and is subject to change.
+It also contains a config for TypeScript that I'm using in my React projects.
 
 The config requires usage of [Prettier, aka the best thing that happened to frontend developers](https://prettier.io/). It doesn't enforce any settings (i.e. Prettier should be configured separately) but my personal config is:
 ```

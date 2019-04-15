@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.0.0] - 15.04.2019
+- Updated `eslint-plugin-import` to 2.17.1:
+  - This package now requires `>=2.17.1` version of `eslint-plugin-import`
+  - TypeScript config now uses `plugin:import/typescript` for import settings
+  - Removed `import/named` rule from TypeScript config (now uses the one from Airbnb) as it supports importing types now
+- Updated Prettier to 1.17.0
+
 ## [2.1.0] - 10.04.2019
 - Fixed typo in a unified-signature**s** rule name
 - Disabled for..of loops from restricted syntax

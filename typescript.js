@@ -1,25 +1,13 @@
-// TODO: remove this and whole settings field once eslint-plugin-import is updated
-const jsExtensions = ['.js', '.jsx'];
-const tsExtensions = ['.ts', '.tsx'];
-const allExtensions = jsExtensions.concat(tsExtensions);
-
 module.exports = {
-  extends: ['plugin:@typescript-eslint/recommended', 'prettier/@typescript-eslint'],
+  extends: [
+    'plugin:@typescript-eslint/recommended',
+    'plugin:import/typescript',
+    'prettier/@typescript-eslint'
+  ],
   plugins: ['@typescript-eslint', 'import', 'prettier', 'react'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     project: './tsconfig.json'
-  },
-  settings: {
-    'import/extensions': allExtensions,
-    'import/parsers': {
-      '@typescript-eslint/parser': tsExtensions
-    },
-    'import/resolver': {
-      node: {
-        extensions: allExtensions
-      }
-    }
   },
   rules: {
     // seems like the most universal option for me
@@ -91,8 +79,6 @@ module.exports = {
     '@typescript-eslint/prefer-interface': 'off',
     // makes sense but is not in recommended
     '@typescript-eslint/unified-signatures': 'error',
-    // it gives false errors with importing types/interfaces from other modules
-    'import/named': 'off',
     // honestly... I'm conflicted here, this one might change, TODO?
     'import/prefer-default-export': 'off',
     // no reason to use these in TypeScript
