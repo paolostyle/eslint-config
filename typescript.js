@@ -6,10 +6,11 @@ module.exports = {
   ],
   plugins: ['@typescript-eslint', 'import', 'prettier', 'react'],
   parser: '@typescript-eslint/parser',
-  parserOptions: {
-    project: './tsconfig.json'
-  },
   rules: {
+    // TypeScript's `noFallthroughCasesInSwitch` option is more robust
+    'default-case': 'off',
+    // TypeScript checks this
+    'no-dupe-class-members': 'off',
     // seems like the most universal option for me
     '@typescript-eslint/array-type': ['error', 'array-simple'],
     // bans capitalized names as they should not be used
@@ -55,7 +56,7 @@ module.exports = {
     '@typescript-eslint/explicit-member-accessibility': 'off',
     // dangling underscores are ughhh
     '@typescript-eslint/member-naming': 'off',
-    // this is useful and more like a disable-next-line kind of rule but for now I'll leave it as is, TODO rethink?
+    // in the ideal world this is next-line-able but it's not the ideal world
     '@typescript-eslint/no-explicit-any': 'off',
     // sometime you really know better than the compiler
     '@typescript-eslint/no-non-null-assertion': 'off',
@@ -79,9 +80,12 @@ module.exports = {
     '@typescript-eslint/prefer-interface': 'off',
     // makes sense but is not in recommended
     '@typescript-eslint/unified-signatures': 'error',
-    // honestly... I'm conflicted here, this one might change, TODO?
+    // hmmmmm
     'import/prefer-default-export': 'off',
     // no reason to use these in TypeScript
-    'react/prop-types': 'off'
+    'react/prop-types': 'off',
+    // typescript equivalent
+    'no-useless-constructor': 'off',
+    '@typescript-eslint/no-useless-constructor': 'error'
   }
 };
