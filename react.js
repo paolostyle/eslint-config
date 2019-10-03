@@ -184,7 +184,8 @@ module.exports = {
     'react/jsx-no-undef': 'error',
 
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-useless-fragment.md
-    'react/jsx-no-useless-fragment': 'error',
+    // https://github.com/yannickcr/eslint-plugin-react/issues/2042#issuecomment-537973274
+    'react/jsx-no-useless-fragment': 'off',
 
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-pascal-case.md
     'react/jsx-pascal-case': [

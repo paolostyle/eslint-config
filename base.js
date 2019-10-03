@@ -29,9 +29,9 @@ module.exports = {
       }
     ],
 
-    // can be probably disabled in typescript
+    // reports redux reducers
     // https://eslint.org/docs/rules/default-param-last
-    'default-param-last': 'error',
+    'default-param-last': 'off',
 
     // It should crash the build
     // https://eslint.org/docs/rules/no-console
