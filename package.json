@@ -1,6 +1,6 @@
 {
   "name": "@paolostyle/eslint-config",
-  "version": "4.0.0",
+  "version": "5.0.0",
   "description": "Airbnb based ESLint config for React with Prettier formatting",
   "main": "index.js",
   "repository": {
