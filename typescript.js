@@ -1,6 +1,7 @@
 module.exports = {
   extends: [
     'plugin:@typescript-eslint/recommended',
+    'plugin:@typescript-eslint/eslint-recommended',
     'plugin:import/typescript',
     'prettier/@typescript-eslint'
   ],
@@ -9,10 +10,13 @@ module.exports = {
   rules: {
     // TypeScript's `noFallthroughCasesInSwitch` option is more robust
     'default-case': 'off',
-    // TypeScript checks this
-    'no-dupe-class-members': 'off',
     // seems like the most universal option for me
-    '@typescript-eslint/array-type': ['error', 'array-simple'],
+    '@typescript-eslint/array-type': [
+      'error',
+      {
+        default: 'array-simple'
+      }
+    ],
     // bans capitalized names as they should not be used
     '@typescript-eslint/ban-types': [
       'error',
@@ -60,14 +64,8 @@ module.exports = {
     '@typescript-eslint/no-explicit-any': 'off',
     // sometime you really know better than the compiler
     '@typescript-eslint/no-non-null-assertion': 'off',
-    // for more dynamic type definitions
-    '@typescript-eslint/no-object-literal-type-assertion': [
-      'error',
-      {
-        allowAsParameter: true
-      }
-    ],
     // the same as in airbnb
+    'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': [
       'error',
       {
@@ -76,8 +74,6 @@ module.exports = {
         ignoreRestSiblings: true
       }
     ],
-    // using type is shorter and there's no reason to not use them where it makes sense
-    '@typescript-eslint/prefer-interface': 'off',
     // makes sense but is not in recommended
     '@typescript-eslint/unified-signatures': 'error',
     // hmmmmm

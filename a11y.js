@@ -1,7 +1,7 @@
 module.exports = {
   plugins: ['jsx-a11y'],
   rules: {
-    // copied from eslint-config-react-app which seems lest strict on this matter than airbnb
+    // copied from eslint-config-react-app which seems less strict on this matter than airbnb
     'jsx-a11y/accessible-emoji': 'error',
     'jsx-a11y/alt-text': 'error',
     'jsx-a11y/anchor-has-content': 'error',
@@ -25,7 +25,6 @@ module.exports = {
     'jsx-a11y/role-has-required-aria-props': 'error',
     'jsx-a11y/role-supports-aria-props': 'error',
     'jsx-a11y/scope': 'error',
-
     'jsx-a11y/click-events-have-key-events': 'off',
     'jsx-a11y/control-has-associated-label': 'off',
     'jsx-a11y/html-has-lang': 'off',

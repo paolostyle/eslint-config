@@ -19,14 +19,6 @@ module.exports = {
     // THE MOST IMPORTANT RULE DON'T EVEN TRY TO CHANGE IT
     'prettier/prettier': 'error',
 
-    // Will be enabled in next major of airbnb - remove then
-    // https://eslint.org/docs/rules/max-classes-per-file
-    'max-classes-per-file': ['error', 1],
-
-    // Will be enabled in next major of airbnb - remove then
-    // https://eslint.org/docs/rules/no-useless-catch
-    'no-useless-catch': 'error',
-
     // API responses often has properties that use snake_case
     // https://eslint.org/docs/rules/camelcase
     camelcase: [
@@ -37,9 +29,16 @@ module.exports = {
       }
     ],
 
+    // can be probably disabled in typescript
+    // https://eslint.org/docs/rules/default-param-last
+    'default-param-last': 'error',
+
     // It should crash the build
     // https://eslint.org/docs/rules/no-console
     'no-console': 'error',
+
+    // https://eslint.org/docs/rules/no-import-assign
+    'no-import-assign': 'error',
 
     // Disabled because it sucks with Array.prototype.reduce
     // https://eslint.org/docs/rules/no-param-reassign
@@ -84,6 +83,9 @@ module.exports = {
 
     // Annoying
     'no-else-return': 'off',
+
+    // https://eslint.org/docs/rules/prefer-regex-literals
+    'prefer-regex-literals': 'error',
 
     // Not really super useful and is a resource hog
     'import/no-cycle': 'off',

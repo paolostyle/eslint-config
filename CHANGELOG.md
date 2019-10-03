@@ -1,5 +1,10 @@
 # Changelog
 
+## [5.0.0] - 03.10.2019
+
+- Updated all dependencies - now requires ESLint v6
+- Added new rules and removed TS rules that were no longer in the package
+
 ## [4.0.0] - 02.07.2019
 
 - Updated all dependencies to latest versions (except for ESLint itself - no support for v6 for now)
