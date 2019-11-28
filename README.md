@@ -1,12 +1,12 @@
 # @paolostyle/eslint-config
-> Airbnb based ESLint config for React with Prettier formatting
+> Airbnb based ESLint config with Prettier formatting
 
 ## About
 
 An ESLint config I've been using for a while (though not as a separate package) in React projects.
-Heavily based on [Airbnb config](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb), but with disabled a11y rules (might use them, but as warnings so it doesn't crash the build) and a bunch of changes in other rules - they are noted with `// *** Different from Airbnb` comment in `index.js`.
+Heavily based on [Airbnb config](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb) with a bit less strict JSX a11y rules (which were copied almost completely from CRA ESLint config) and a bunch of changes in other rules - they are noted with `// *** Different from Airbnb` comment in `index.js`.
 
-It also contains a config for TypeScript that I'm using in my React projects.
+It also contains a config for TypeScript.
 
 The config requires usage of [Prettier, aka the best thing that happened to frontend developers](https://prettier.io/). It doesn't enforce any settings (i.e. Prettier should be configured separately) but my personal config is:
 ```
@@ -22,15 +22,11 @@ It also includes linting rules for React hooks, so you should use React 16.8.0 o
 ## Installation
 
 ### Base config
-Since there's a bunch of other ESLint configs and plugins involved, you will need to install this package's `peerDependencies` as dev dependencies. If you're using Create React App, you don't have to install all of them explicitly - doing so would most likely result in duplicate versions and CRA apparently doesn't like it. So if you're using CRA, run:
+Install Prettier and ESLint if you don't have them installed yet:
 ```
-yarn add --dev eslint-config-airbnb-base eslint-config-prettier eslint-plugin-prettier eslint-plugin-react-hooks prettier
+yarn add --dev eslint prettier
 ```
-These are not installed by default by CRA. If you're not using CRA at all, you should also run:
-```
-yarn add --dev babel-eslint eslint eslint-plugin-import eslint-plugin-react
-```
-Then install this package:
+This config uses a good amount of plugins, but they will all be installed as dependencies for ease of use and better compatibility, so you just have to run:
 ```
 yarn add --dev @paolostyle/eslint-config
 ```
@@ -49,12 +45,7 @@ The last step is to add the Prettier config to your `package.json` file:
 ```
 
 ### TypeScript config
-Since it should be used with the base one (though it's not required - it uses only Prettier, base ESLint and @typescript-eslint rules), you should first do all the steps required for the base config.
-After that, install TypeScript parser and config:
-```
-yarn add --dev @typescript-eslint/parser @typescript-eslint/eslint-config
-```
-Then add the TypeScript config to your `.eslintrc.*` file:
+@typescript-eslint packages are installed automatically as dependencies, because I honestly can't imagine not using Typescript these days. However the configs are still split up, therefore to use it you have to add the TypeScript config to your `.eslintrc.*` file:
 ```
 {
   "extends": [

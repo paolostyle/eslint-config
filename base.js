@@ -90,6 +90,13 @@ module.exports = {
     // Not really super useful and is a resource hog
     'import/no-cycle': 'off',
 
+    // missing in Airbnb:
+    'no-constructor-return': 'error',
+    'grouped-accessor-pairs': 'off',
+    'no-dupe-else-if': 'error',
+    'no-setter-return': 'error',
+    'prefer-exponentiation-operator': 'error',
+
     // Added ejected CRA rules
     'import/no-extraneous-dependencies': [
       'error',
