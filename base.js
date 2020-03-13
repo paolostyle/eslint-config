@@ -90,6 +90,8 @@ module.exports = {
     // Not really super useful and is a resource hog
     'import/no-cycle': 'off',
 
+    'import/extensions': 'off',
+
     // missing in Airbnb:
     'no-constructor-return': 'error',
     'grouped-accessor-pairs': 'off',
