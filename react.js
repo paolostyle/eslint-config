@@ -119,6 +119,9 @@ module.exports = {
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/forbid-foreign-prop-types.md
     'react/forbid-foreign-prop-types': 'error',
 
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/function-component-definition.md
+    'react/function-component-definition': 'off',
+
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-boolean-value.md
     'react/jsx-boolean-value': [
       'error',
@@ -172,6 +175,9 @@ module.exports = {
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-literals.md
     'react/jsx-no-literals': 'off',
 
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-script-url.md
+    'react/jsx-no-script-url': 'error',
+
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-target-blank.md
     'react/jsx-no-target-blank': [
       'error',
@@ -216,6 +222,9 @@ module.exports = {
 
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-access-state-in-setstate.md
     'react/no-access-state-in-setstate': 'error',
+
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-adjacent-inline-elements.md
+    'react/no-adjacent-inline-elements': 'off',
 
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-array-index-key.md
     'react/no-array-index-key': 'error',
