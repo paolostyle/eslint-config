@@ -1,6 +1,6 @@
 {
   "name": "@paolostyle/eslint-config",
-  "version": "7.0.0",
+  "version": "7.0.1",
   "description": "Airbnb based ESLint config with Prettier formatting",
   "main": "index.js",
   "repository": {
