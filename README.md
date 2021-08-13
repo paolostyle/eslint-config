@@ -45,15 +45,7 @@ The last step is to add the Prettier config to your `package.json` file:
 ```
 
 ### TypeScript config
-@typescript-eslint packages are installed automatically as dependencies, because I honestly can't imagine not using Typescript these days. However the configs are still split up, therefore to use it you have to add the TypeScript config to your `.eslintrc.*` file:
-```
-{
-  "extends": [
-    "@paolostyle",
-    "@paolostyle/eslint-config/typescript"
-  ]
-}
-```
+TypeScript config is included by default.
 
 ## License
 [MIT](https://github.com/paolostyle/eslint-config/blob/master/LICENSE)

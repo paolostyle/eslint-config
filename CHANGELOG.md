@@ -1,5 +1,12 @@
 # Changelog
 
+## [8.0.0] - 13.08.2021
+
+- Updated all dependencies - requires latest ESLint v7
+- More strict a11y rules
+- TypeScript rules included by default in the config
+- Cleaned up TypeScript rules
+
 ## [5.0.0] - 03.10.2019
 
 - Updated all dependencies - now requires ESLint v6
@@ -9,7 +16,7 @@
 
 - Updated all dependencies to latest versions (except for ESLint itself - no support for v6 for now)
 - Major overhaul of file structure: main config works more or less the same (contains base and react config), but
-  they're now separated, so it's possible to use only base rules or only React rules 
+  they're now separated, so it's possible to use only base rules or only React rules
   (the latter doesn't make much sense though)
 - Added a11y JSX rules from react-app ESLint config
 - Relaxed some rules on all fronts

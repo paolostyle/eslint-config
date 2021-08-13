@@ -1,10 +1,10 @@
 module.exports = {
-  extends: [require.resolve('./a11y'), 'prettier/react'],
+  extends: ['plugin:jsx-a11y/recommended', 'prettier'],
   plugins: ['react', 'react-hooks'],
   settings: {
     react: {
-      version: 'detect'
-    }
+      version: 'detect',
+    },
   },
   rules: {
     // Removed UNSAFE_ methods
@@ -25,9 +25,9 @@ module.exports = {
           'componentDidUpdate',
           'componentWillUnmount',
           'componentDidCatch',
-          'getSnapshotBeforeUpdate'
-        ]
-      }
+          'getSnapshotBeforeUpdate',
+        ],
+      },
     ],
 
     // I don't really use default props unless it makes sense, so it's disabled
@@ -100,8 +100,8 @@ module.exports = {
       {
         button: true,
         reset: false,
-        submit: true
-      }
+        submit: true,
+      },
     ],
 
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/display-name.md
@@ -127,8 +127,8 @@ module.exports = {
       'error',
       'never',
       {
-        always: []
-      }
+        always: [],
+      },
     ],
 
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-child-element-spacing.md
@@ -139,8 +139,8 @@ module.exports = {
       'error',
       {
         children: 'never',
-        props: 'never'
-      }
+        props: 'never',
+      },
     ],
 
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-handler-names.md
@@ -157,8 +157,8 @@ module.exports = {
         allowBind: false,
         allowFunctions: false,
         ignoreDOMComponents: true,
-        ignoreRefs: true
-      }
+        ignoreRefs: true,
+      },
     ],
 
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-comment-textnodes.md
@@ -168,8 +168,8 @@ module.exports = {
     'react/jsx-no-duplicate-props': [
       'error',
       {
-        ignoreCase: true
-      }
+        ignoreCase: true,
+      },
     ],
 
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-literals.md
@@ -182,8 +182,8 @@ module.exports = {
     'react/jsx-no-target-blank': [
       'error',
       {
-        enforceDynamicLinks: 'always'
-      }
+        enforceDynamicLinks: 'always',
+      },
     ],
 
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-undef.md
@@ -198,8 +198,8 @@ module.exports = {
       'error',
       {
         allowAllCaps: true,
-        ignore: []
-      }
+        ignore: [],
+      },
     ],
 
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-sort-default-props.md
@@ -280,8 +280,8 @@ module.exports = {
       'error',
       {
         customValidators: [],
-        skipShapeProps: true
-      }
+        skipShapeProps: true,
+      },
     ],
 
     // https://github.com/yannickcr/eslint-plugin-react/pull/1103/
@@ -300,8 +300,8 @@ module.exports = {
     'react/prefer-stateless-function': [
       'error',
       {
-        ignorePureComponents: false
-      }
+        ignorePureComponents: false,
+      },
     ],
 
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prop-types.md
@@ -310,8 +310,8 @@ module.exports = {
       {
         customValidators: [],
         ignore: [],
-        skipUndeclared: false
-      }
+        skipUndeclared: false,
+      },
     ],
 
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/react-in-jsx-scope.md
@@ -321,8 +321,8 @@ module.exports = {
     'react/require-optimization': [
       'off',
       {
-        allowDecorators: []
-      }
+        allowDecorators: [],
+      },
     ],
 
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/require-render-return.md
@@ -340,10 +340,16 @@ module.exports = {
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/void-dom-elements-no-children.md
     'react/void-dom-elements-no-children': 'error',
 
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unstable-nested-components.md
+    'react/no-unstable-nested-components': 'error',
+
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-constructed-context-values.md
+    'react/jsx-no-constructed-context-values': 'error',
+
     // https://reactjs.org/docs/hooks-rules.html
     'react-hooks/rules-of-hooks': 'error',
 
     // https://github.com/facebook/react/issues/14920
-    'react-hooks/exhaustive-deps': 'error'
-  }
+    'react-hooks/exhaustive-deps': 'error',
+  },
 };
